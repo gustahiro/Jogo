@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Lâmina da Vingança</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="ui">
+        <div id="start-menu">
+            <h1 id="title">A Lâmina da Vingança</h1>
+            <p id="lore">Seu vilarejo está sendo invadido por guerreiros da era Sengoku. Pegue sua lendária katana e
+                busque sua vingança!</p>
+            <p id="controls">Controles: [A/D] Mover | [W] Pular | [Espaço] Atacar | [Shift] Dash | [E] Dash Attack</p>
+            <button id="start-btn">Iniciar Aventura</button>
+        </div>
+
+        <div id="stats" class="hidden">
+            <div class="stat-box">❤️ Vidas: <span id="health">5</span></div>
+            <div class="stat-box">⭐ Inimigos Derrotados: <span id="score">0</span></div>
+            <div class="stat-box">🔥 Especial: <span id="special-cd">Pronto</span></div>
+            <div class="stat-box">🏆 Recorde: <span id="high-score">0</span></div>
+        </div>
+
+        <button id="pause-btn" class="hidden">⏸</button>
+
+        <div id="pause-menu" class="hidden">
+            <h2>Jogo Pausado</h2>
+            <button id="resume-btn">Continuar</button>
+            <button id="menu-btn-pause">Voltar ao Início</button>
+        </div>
+
+        <div id="game-over" class="hidden">
+            <h2>Você morreu</h2>
+            <p>Os inimigos da era Sengoku tomaram conta do vilarejo.</p>
+            <p>Score Final: <span id="final-score"></span></p>
+            <button id="restart-btn">Tentar Novamente</button>
+            <button id="menu-btn-over">Voltar ao Início</button>
+        </div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <script src="game.js"></script>
+</body>
+
+</html>
